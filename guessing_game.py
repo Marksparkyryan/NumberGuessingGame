@@ -87,9 +87,11 @@ def start_game():
                     print("\n")
                     print("~Round {}~".format(round))
                     print("***** Current High Score: {} *****".format(high_score))
+                    print("-" * 40)
                     magic_number = magic_number_maker()
                     continue
                 else:
+                    print("Thanks for playing! Goodbye!")
                     exit()
                     
             if guess > magic_number:
