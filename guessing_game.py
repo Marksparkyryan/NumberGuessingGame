@@ -36,8 +36,7 @@ def start_game():
     round = 1
     high_score = 0
     
-    
-    
+
     def greeting():
         print("-" * 40)
         print("Welcome to the Number Guessing Game!")
@@ -46,6 +45,7 @@ def start_game():
         print("-" * 40)
         print("~Round {}~".format(round))
     
+
     def magic_number_maker():
         magic_number = random.randint(1,10)
         return magic_number
@@ -60,12 +60,8 @@ def start_game():
                 return attempts
         else:
             return high_score
-        
-            
-        
-            
-            
 
+    
     magic_number = magic_number_maker()
     greeting()
     while True:
@@ -82,6 +78,7 @@ def start_game():
             attempts += 1
             if guess == magic_number:
                 print("You guessed it! It took you {} attempt(s) to guess the correct number!".format(attempts))
+                
                 play_again = input("Play again? [y] or [n] ")
                 if play_again == "y":
                     round += 1
