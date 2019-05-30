@@ -5,7 +5,9 @@ Project 1 - Number Guessing Game
 
 For this first project we will be using Workspaces. 
 
-NOTE: If you strongly prefer to work locally on your own computer, you can totally do that by clicking: File -> Download Workspace in the file menu after you fork the snapshot of this workspace.
+NOTE: If you strongly prefer to work locally on your own computer, you 
+can totally do that by clicking: File -> Download Workspace in the file 
+menu after you fork the snapshot of this workspace.
 
 """
 
@@ -20,12 +22,17 @@ def start_game():
     1. Display an intro/welcome message to the player.
     2. Store a random number as the answer/solution.
     3. Continuously prompt the player for a guess.
-      a. If the guess greater than the solution, display to the player "It's lower".
-      b. If the guess is less than the solution, display to the player "It's higher".
+      a. If the guess greater than the solution, display to the player 
+      "It's lower".
+      b. If the guess is less than the solution, display to the player 
+      "It's higher".
     
-    4. Once the guess is correct, stop looping, inform the user they "Got it"
-         and show how many attempts it took them to get the correct number.
-    5. Let the player know the game is ending, or something that indicates the game is over.
+    4. Once the guess is correct, stop looping, inform the user they 
+    "Got it"
+         and show how many attempts it took them to get the correct 
+         number.
+    5. Let the player know the game is ending, or something that 
+    indicates the game is over.
     
     ( You can add more features/enhancements if you'd like to. )
     """
@@ -39,14 +46,21 @@ def start_game():
 
     def greeting():
         print("Welcome to...")
-        # Banner generated at https://www.askapache.com/online-tools/figlet-ascii/
+        # Banner generated at 
+        # https://www.askapache.com/online-tools/figlet-ascii/
         print("""        
-  ________         _   __                __              ______                     _             ______                   
- /_  __/ /_  ___  / | / /_  ______ ___  / /_  ___  _____/ ____/_  _____  __________(_)___  ____ _/ ____/___ _____ ___  ___ 
-  / / / __ \/ _ \/  |/ / / / / __ `__ \/ __ \/ _ \/ ___/ / __/ / / / _ \/ ___/ ___/ / __ \/ __ `/ / __/ __ `/ __ `__ \/ _ \\
- / / / / / /  __/ /|  / /_/ / / / / / / /_/ /  __/ /  / /_/ / /_/ /  __(__  |__  ) / / / / /_/ / /_/ / /_/ / / / / / /  __/
-/_/ /_/ /_/\___/_/ |_/\__,_/_/ /_/ /_/_.___/\___/_/   \____/\__,_/\___/____/____/_/_/ /_/\__, /\____/\__,_/_/ /_/ /_/\___/ 
-                                                                                        /____/                             
+  ________         _   __                __                           
+ /_  __/ /_  ___  / | / /_  ______ ___  / /_  ___  _____
+  / / / __ \/ _ \/  |/ / / / / __ `__ \/ __ \/ _ \/ ___/
+ / / / / / /  __/ /|  / /_/ / / / / / / /_/ /  __/ /  
+/_/ /_/ /_/\___/_/ |_/\__,_/_/ /_/ /_/_.___/\___/_/    
+                                                                                                                
+   ______                     _             ______                   
+  / ____/_  _____  __________(_)___  ____ _/ ____/___ _____ ___  ___ 
+ / / __/ / / / _ \/ ___/ ___/ / __ \/ __ `/ / __/ __ `/ __ `__ \/ _ \\
+/ /_/ / /_/ /  __(__  |__  ) / / / / /_/ / /_/ / /_/ / / / / / /  __/
+\____/\__,_/\___/____/____/_/_/ /_/\__, /\____/\__,_/_/ /_/ /_/\___/ 
+                                   /____/                                                                      
    """)
         if high_score:
             print("***** Current High Score: {} *****".format(high_score))
@@ -76,16 +90,19 @@ def start_game():
         try:
             guess = input("Choose a number between 1 and 10: ")
             if not guess.isdigit():
-                raise ValueError("Guess must be an integer value. Please try again.")
+                raise ValueError("Guess must be an integer value. " 
+                                 "Please try again.")
             guess = int(guess)
             if guess > 10 or guess < 1:
-                raise ValueError("Guess is out of range. Please guess between 1 and 10.")
+                raise ValueError("Guess is out of range. Please guess between " 
+                                 "1 and 10.")
         except ValueError as err:
             print("Uh oh! {}".format(err))
         else:
             attempts += 1
             if guess == magic_number:
-                print("You guessed it! It took you {} attempt(s) to guess the correct number!".format(attempts))
+                print("You guessed it! It took you {} attempt(s) to guess "
+                      "the correct number!".format(attempts))
                 
                 play_again = input("Play again? [y] or [n] ")
                 if play_again == "y":
@@ -94,7 +111,8 @@ def start_game():
                     attempts = 0
                     print("\n")
                     print("~Round {}~".format(round))
-                    print("***** Current High Score: {} *****".format(high_score))
+                    print("***** Current High Score: "
+                          "{} *****".format(high_score))
                     print("-" * 35)
                     magic_number = magic_number_maker()
                     continue
