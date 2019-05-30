@@ -38,11 +38,19 @@ def start_game():
     
 
     def greeting():
-        print("-" * 40)
-        print("Welcome to the Number Guessing Game!")
+        print("Welcome to...")
+        # Banner generated at https://www.askapache.com/online-tools/figlet-ascii/
+        print("""        
+  ________         _   __                __              ______                     _             ______                   
+ /_  __/ /_  ___  / | / /_  ______ ___  / /_  ___  _____/ ____/_  _____  __________(_)___  ____ _/ ____/___ _____ ___  ___ 
+  / / / __ \/ _ \/  |/ / / / / __ `__ \/ __ \/ _ \/ ___/ / __/ / / / _ \/ ___/ ___/ / __ \/ __ `/ / __/ __ `/ __ `__ \/ _ \\
+ / / / / / /  __/ /|  / /_/ / / / / / / /_/ /  __/ /  / /_/ / /_/ /  __(__  |__  ) / / / / /_/ / /_/ / /_/ / / / / / /  __/
+/_/ /_/ /_/\___/_/ |_/\__,_/_/ /_/ /_/_.___/\___/_/   \____/\__,_/\___/____/____/_/_/ /_/\__, /\____/\__,_/_/ /_/ /_/\___/ 
+                                                                                        /____/                             
+   """)
         if high_score:
             print("***** Current High Score: {} *****".format(high_score))
-        print("-" * 40)
+        print("-" * 35)
         print("~Round {}~".format(round))
     
 
@@ -87,7 +95,7 @@ def start_game():
                     print("\n")
                     print("~Round {}~".format(round))
                     print("***** Current High Score: {} *****".format(high_score))
-                    print("-" * 40)
+                    print("-" * 35)
                     magic_number = magic_number_maker()
                     continue
                 else:
