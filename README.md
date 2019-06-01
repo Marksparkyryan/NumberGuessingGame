@@ -2,6 +2,7 @@
 
 This is my Treehouse Python Techdegree Project 1. This is a simple number guessing game that features basic variables, functions, exceptions, and loops. This is a graded project that will attempt to meet the following criteria provided by Treehouse:
 
+```
 When the program starts, we want to:
     ------------------------------------
     1. Display an intro/welcome message to the player.
@@ -20,4 +21,4 @@ When the program starts, we want to:
     indicates the game is over.
     
     ( You can add more features/enhancements if you'd like to. )
-   
+```
