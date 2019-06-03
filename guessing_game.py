@@ -38,12 +38,12 @@ def start_game():
     """
     # write your code inside this function.
     
-          
+    # gameplay variables      
     attempts = 0
     round = 1
     high_score = 0
     
-
+    # function that 
     def greeting():
         print("")
         print("Welcome to...")
@@ -67,11 +67,19 @@ def start_game():
 
 
     def magic_number_maker():
+        """
+        Generate and return a random integer between one and ten 
+        inclusive.
+        """
         magic_number = random.randint(1,10)
         return magic_number
     
     
     def set_high_score(attempts, high_score):
+        """
+        Set high_score to the lowest value of attempts and return 
+        high_score.
+        """
         if high_score == 0:
             return attempts
         elif attempts > high_score:
@@ -83,6 +91,11 @@ def start_game():
     
 
     def make_guess(round, attempts, high_score, magic_number):
+        """
+        Prompt user for an integer guess between 1 and 10 inclusive.
+        If guess is correct, return number of attempts and prompt for 
+        replay. Otherwise, continue prompting player for guess. 
+        """
         while True:
             try:
                 guess = input("Choose a number between 1 and 10: ")
@@ -115,6 +128,10 @@ def start_game():
     
 
     def play_again(round, attempts, high_score):
+        """
+        Prompt player for replay. Carry forward high_score into next 
+        round. Generate new random integer and start new round.
+        """
         while True:
             try:
                 play_again = input("Play again? [y] or [n] ").lower()
@@ -135,6 +152,9 @@ def start_game():
     
     
     def show_round(round, high_score):
+        """
+        Display round and high score to player.
+        """
         print("\n")
         round_title_length = len(" Round {} ".format(round))
         top_border = int((35 - round_title_length) / 2)
@@ -147,6 +167,9 @@ def start_game():
     
 
     def goodbye():
+        """
+        Thank user for playing and exit.
+        """
         print("")
         print("Thanks for playing! Goodbye!")
         print("")
