@@ -15,7 +15,8 @@ import random
 
 
 def start_game():
-    """Psuedo-code Hints
+    """
+    Psuedo-code Hints
     
     When the program starts, we want to:
     ------------------------------------
