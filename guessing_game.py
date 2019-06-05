@@ -98,11 +98,9 @@ def start_game():
                 if guess > magic_number:
                     print("")
                     print("It's lower. Guess again!")
-                    continue
                 if guess < magic_number:
                     print("")
                     print("It's higher. Guess again!")
-                    continue
     
 
     def play_again(round, attempts, high_score):
