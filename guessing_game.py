@@ -8,14 +8,18 @@ import random
 
 
 def start_game():
- 
-    # gameplay variables      
+    """
+    function initiates entire gameplay and initiates gameplay variables
+    """     
     attempts = 0
     round = 1
     high_score = 0
     
-    # function that 
+    
     def greeting():
+        """
+        function displays banner greeting
+        """
         print("")
         print("Welcome to...")
         # Banner generated at 
@@ -36,7 +40,7 @@ def start_game():
    """)
         print("press [q] to quit")
 
-
+    
     def magic_number_maker():
         """
         Generate and return a random integer between one and ten 
@@ -60,7 +64,7 @@ def start_game():
         else:
             return high_score
     
-
+   
     def make_guess(round, attempts, high_score, magic_number):
         """
         Prompt user for an integer guess between 1 and 10 inclusive.
